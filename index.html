@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Vorlesung</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Samuel Merk &amp; André Epp" />
+    <meta name="date" content="2022-04-26" />
+    <script src="libs/header-attrs-2.13/header-attrs.js"></script>
+    <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+    <script src="libs/typed-2.0.11/typed.min.js"></script>
+    <script src="libs/typed-binding-0.0.3/typed.js"></script>
+    <script src="libs/pymjs-1.3.2/pym.v1.js"></script>
+    <script src="libs/widgetframe-binding-0.3.1/widgetframe.js"></script>
+    <script src="libs/core-js-2.5.3/shim.min.js"></script>
+    <script src="libs/react-17.0.0/react.min.js"></script>
+    <script src="libs/react-17.0.0/react-dom.min.js"></script>
+    <script src="libs/reactwidget-1.0.0/react-tools.js"></script>
+    <script src="libs/reactable-binding-0.2.3/reactable.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center,  middle, hide_logo
+
+
+&lt;head&gt;
+&lt;script src="https://kit.fontawesome.com/994a28441d.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;!--&lt;div class="my-footer"&gt;&lt;span&gt;Folien CC-BY verfügbar unter https://atelier-phka-merk-2020.netlify.app&lt;/span&gt;&lt;/div&gt; 
+
+
+&lt;style&gt;
+.remark-slide-number {
+  font-size: 10pt;
+  margin-bottom: -11.6px;
+  margin-right: 10px;
+  color: red; /* white */
+  opacity: 0; /* default: 0.5 */
+}
+&lt;/style&gt;
+--&gt; 
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 80px;
+height: 128px;
+z-index: 0;
+background-image: url(https://apps.samuel-merk.de/data/PHK_2018_Logo_V1_FARBE_NUR_PH.svg);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+.phg[
+# Vorlesung:
+
+&lt;i class="fas fa-microscope fa-7x"&gt;&lt;/i&gt;
+
+### Qualitative und quantitative Forschungsmethoden
+---  
+.em14[Samuel Merk | PH Karlsruhe]]  
+<span id="htmlwidget-909655421ad8ce84598f" class="typed html-widget"></span>
+<script type="application/json" data-for="htmlwidget-909655421ad8ce84598f">{"x":{"strings":["Hallo und 💚-lich Willkommen!","Die heutige Sitzung wird drei Teile haben:","1. als erstes werden wir Abstracts lesen und kategorisieren","2. danach auf das Experiment eingehen, das Sie bearbeitet haben","und 3. Ihre dann noch offenen Fragen bearbeiten"],"contentType":"html","typeSpeed":80,"backSpeed":10,"backDelay":3000,"loop":true},"evals":[],"jsHooks":[]}</script> 
+
+
+
+---
+class: middle center
+## 1) Anwenden der Begriffe auf echte Forschungsliteratur
+
+---
+## Einführendes Beispiel: https://bit.ly/merk021
+&lt;center&gt;
+&lt;iframe id="frame01" src='https://www.spiegel.de/panorama/bildung/neue-studie-lehramtsstudium-ohne-digitalkompetenz-kein-problem-a-417132e4-ff30-4134-8bbb-a14f09599414'&gt;&lt;/iframe&gt;
+&lt;/center&gt;
+&lt;style&gt;
+#frame01{ height: 480px; width: 1000px; align: center; overflow: scroll;}
+&lt;/style&gt;
+
+---
+## Vertiefende Beispiele
+
+Bitte beantworten Sie die Frage auf https://bit.ly/merk006 &lt;br&gt;&lt;br&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-1-1.png" width="30%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle center
+# 2) »Heatmap-Experiment«
+
+---
+---
+class: hide_logo
+## Digitales Formatives Assessment
+### Ausgangslage
+.em13[
+* Feedback gilt als vergleichweise stark lernförderliche Intervention .cit[(Black &amp; Wiliam, 2009)]
+* Formatives Assessment wird jedoch kaum von Lehrkräften um gesetzt .cit[(Maier, 2019)]
+* Digitalen Technologien wird Potential zugeschrieben, die Hürden für formatives Assessment zu senken .cit[(Tomasik et al., 2018)]]
+--
+.pull-left[
+.center[
+&amp;nbsp;&lt;br&gt;
+#### Sowohl Substitution...
+<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:100px;width:75px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#62DC3A;overflow:visible;position:relative;"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 236c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-72v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm96-114.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"/></svg> &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;
+<svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:100px;width:87.5px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#62DC3A;overflow:visible;position:relative;"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg> &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;
+<svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:100px;width:87.5px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#62DC3A;overflow:visible;position:relative;"><path d="M400 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM224 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm176-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h328c6.6 0 12 5.4 12 12v312z"/></svg> 
+]
+]
+.pull-right[
+.center[
+&amp;nbsp;&lt;br&gt;
+#### ... als auch Transformation
+&lt;div class="figure"&gt;
+&lt;img src="img/MolView.png" alt="molview.org" width="35%" /&gt;
+&lt;p class="caption"&gt;molview.org&lt;/p&gt;
+&lt;/div&gt;
+]
+]
+
+---
+class: middle, center
+
+&lt;div class="figure"&gt;
+&lt;img src="img/Verlauf_Biaesch.png" alt="Projektablauf: »Vom Testergebnis zur pädagogischen Maßnahme« (Biaesch Stiftung" width="3807" /&gt;
+&lt;p class="caption"&gt;Projektablauf: »Vom Testergebnis zur pädagogischen Maßnahme« (Biaesch Stiftung&lt;/p&gt;
+&lt;/div&gt;
+
+---
+class: middle, center
+
+&lt;div class="figure"&gt;
+&lt;img src="img/Verlauf_Biaesch_Pot.png" alt="Projektablauf: »Vom Testergebnis zur pädagogischen Maßnahme« (Biaesch Stiftung" width="3807" /&gt;
+&lt;p class="caption"&gt;Projektablauf: »Vom Testergebnis zur pädagogischen Maßnahme« (Biaesch Stiftung&lt;/p&gt;
+&lt;/div&gt;
+
+
+---
+class: hide_logo
+## Potentiale dig. Technologien für die Aufgabenkultur .cit[(Bez, Merk &amp; Tomasik 2021)]
+.em14[
+* Redefinierte Aufgabenformen 
+* Automatisierte Korrektur und unmittelbares Feedback (auch jenseits geschlossener Aufgabenformate)
+* Digitale »Aufgabenpools«
+    * Interaktive Suche entlang diverser Kriterien
+    * Kalibrierte Aufgabenschwierigkeit
+* Adaptive Aufgabenauswahl
+* Echtzeitergebnisübersicht
+* ...]
+
+--
+
+.large[.center[.phg[
+`\(\Rightarrow\)` Neue, komplexe Anforderungen an das professionelle Handeln
+]]]
+
+---
+class: middle, center
+
+&lt;div class="figure"&gt;
+&lt;img src="img/Verlauf_Biaesch_explo.png" alt="Projektablauf: »Vom Testergebnis zur pädagogischen Maßnahme« (Biaesch Stiftung" width="3807" /&gt;
+&lt;p class="caption"&gt;Projektablauf: »Vom Testergebnis zur pädagogischen Maßnahme« (Biaesch Stiftung&lt;/p&gt;
+&lt;/div&gt;
+
+---
+## Explorative Think-Aloud-Studie
+.pull-left[
+### Formatives Assessmentsystem
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/mindsteps_auswahl_testart.png" alt="mindsteps.ch" width="80%" /&gt;
+&lt;p class="caption"&gt;mindsteps.ch&lt;/p&gt;
+&lt;/div&gt;
+]
+
+.pull-right[
+### Stichprobe:
+* Theoretisches/gezieltes Sampling (Patton 1990)
+* `\(N = 48\)` Intensivnutzer\*innen von Mindsteps 
+* `\(N_{weiblich} = 23\)`
+* `\(MW_{Alter} = 43.7\)`
+* `\(SD_{Alter} = 11.5\)`)
+]
+
+---
+class: hide_logo middle
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/mindsteps_ergebnisse_klasse_querschnitt.png" alt="mindsteps.ch" width="71%" /&gt;
+&lt;p class="caption"&gt;mindsteps.ch&lt;/p&gt;
+&lt;/div&gt;
+
+
+---
+class: hide_logo middle
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/mindsteps_ergebnisse_einzelschuelerin.png" alt="mindsteps.ch" width="60%" /&gt;
+&lt;p class="caption"&gt;mindsteps.ch&lt;/p&gt;
+&lt;/div&gt;
+
+
+---
+## Auswertung
+Induktiv-Deduktives Timed-Event Coding der Screencasts entlang eines Modells von Coburn &amp; Turner .cit[(2011)]
+
+.pull-left[
+1. &lt;b&gt;Noticing&lt;/b&gt;
+    * Rezeption der Grafiken
+        * *Verteilungsform*
+        * *Zentrale Tendenz*
+        * *Dispersion*
+        * *Einzelne Schülerinnen und Schüler*
+2. &lt;b&gt;Interpreting&lt;/b&gt;
+    * Abgleich mit der eigenen Einschätzung
+    * Fehleranalyse
+        * *Curriculare Subcomponenten*
+        * *Aufgabenformatartefakte*
+3. &lt;b&gt;Constructing Implications&lt;/b&gt;
+    * Curriculare Adaoption
+    * Einzelförderung
+    * Gruppeneinteilung
+]
+
+--
+
+.pull-right[
+### Interraterreliabilität
+* Krippendorffs `\(.51 ≤ \alpha ≤ .95\)` .cit[(Hayes &amp; Krippendorff, 2007)]
+* Überführung von Abweichungen in Konsensurteile
+
+### Verlaufsanalyse
+* Zero-/First-Order (manifest) Marcov Chains .cit[(Scholz, 2016)]
+    * Auszählung (bedingter) relativer Übergangswahrscheinlichkeiten
+]
+
+---
+
+### .phgreenlight[Hypothese: Fehleranalyse ist zentral] .cit[(Bez &amp; Merk, 2021)]
+
+<div id="htmlwidget-9eeba1b5ddd6939855e3" style="width:100%;height:500px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9eeba1b5ddd6939855e3">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-9.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+
+---
+class: middle, center
+
+&lt;div class="figure"&gt;
+&lt;img src="img/Verlauf_Biaesch_konf.png" alt="Projektablauf: »Vom Testergebnis zur pädagogischen Maßnahme« (Biaesch Stiftung" width="3807" /&gt;
+&lt;p class="caption"&gt;Projektablauf: »Vom Testergebnis zur pädagogischen Maßnahme« (Biaesch Stiftung&lt;/p&gt;
+&lt;/div&gt;
+
+
+---
+## Konfirmatorische Studie (RCT)
+&gt; .phgreenlight[Ziel: Verbesserung von Noticing und Interpreting durch innovative Darstellungen und eine Kurzzeit-Schulung]
+
+### Abhängige Variablen:
+
+AV1: Akkuratheit
+* Wie gut stimmen von Lehrkräften gebildete homogene (Lern-)Gruppen mit algorithmischen Lösungen überein?
+        
+AV2: Effektivität
+* Wie lange brauchen Lehrkräfte um auf ihre korrekte Lösung zu kommen?
+
+AV3: Diagnostische Differenziertheit
+* Erkennen Lehrkräfte 
+    * Curriculare Subkomponenten und
+    * Aufgabenformatartefakte?
+
+---
+## Konfirmatorische Studie: Design
+
+
+
+
+---
+## Konfirmatorische Studie (RCT)
+### Design
+&lt;img src="img/Design_Heatmapstudie.png" width="70%" /&gt;
+
+---
+## Konfirmatorische Studie (RCT)
+### Materials
+.pull-left[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-12-1.png" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+<div id="htmlwidget-f73aded9105f94c818c2" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-f73aded9105f94c818c2">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"PID":["Schüler*in01","Schüler*in02","Schüler*in03","Schüler*in04","Schüler*in05","Schüler*in06","Schüler*in07","Schüler*in08","Schüler*in09","Schüler*in10","Schüler*in11","Schüler*in12","Schüler*in13","Schüler*in14","Schüler*in15","Schüler*in16","Schüler*in17","Schüler*in18","Schüler*in19","Schüler*in20"],"Umkreis_Nom":[1,1,1,1,1,1,0,0,1,1,1,1,0,0,1,1,1,1,0,0],"Ustreich_Nom":[0,0,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,0,0],"Umkreis_Adj":[1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,0,0],"Ustreich_Adj":[0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0],"Umkreis_Verb":[1,1,1,1,1,1,0,0,1,1,1,1,0,0,1,1,1,1,1,1],"Ustreich_Verb":[0,0,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1],"SC_3_Nom":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"SC_3_Adj":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"SC_3_Verb":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"SC_5_Art":[0,0,0,0,1,1,0,0,0,0,1,1,0,0,0,0,1,1,0,0],"SC_5_Pronom":[0,0,0,0,1,1,0,0,0,0,1,1,0,0,0,0,1,1,0,0]},"columns":[{"accessor":"PID","name":"PID","type":"character","minWidth":150},{"accessor":"Umkreis_Nom","name":"Umkreis_Nom","type":"numeric"},{"accessor":"Ustreich_Nom","name":"Ustreich_Nom","type":"numeric"},{"accessor":"Umkreis_Adj","name":"Umkreis_Adj","type":"numeric"},{"accessor":"Ustreich_Adj","name":"Ustreich_Adj","type":"numeric"},{"accessor":"Umkreis_Verb","name":"Umkreis_Verb","type":"numeric"},{"accessor":"Ustreich_Verb","name":"Ustreich_Verb","type":"numeric"},{"accessor":"SC_3_Nom","name":"SC_3_Nom","type":"numeric"},{"accessor":"SC_3_Adj","name":"SC_3_Adj","type":"numeric"},{"accessor":"SC_3_Verb","name":"SC_3_Verb","type":"numeric"},{"accessor":"SC_5_Art","name":"SC_5_Art","type":"numeric"},{"accessor":"SC_5_Pronom","name":"SC_5_Pronom","type":"numeric"}],"resizable":true,"defaultPageSize":6,"showPageSizeOptions":true,"pageSizeOptions":[10,25,50,100],"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"nowrap":true,"theme":{"color":"hsl(233, 9%, 87%)","backgroundColor":"hsl(233, 9%, 19%)","borderColor":"hsl(233, 9%, 22%)","stripedColor":"hsl(233, 12%, 22%)","highlightColor":"hsl(233, 12%, 24%)","inputStyle":{"backgroundColor":"hsl(233, 9%, 25%)"},"selectStyle":{"backgroundColor":"hsl(233, 9%, 25%)"},"pageButtonHoverStyle":{"backgroundColor":"hsl(233, 9%, 25%)"},"pageButtonActiveStyle":{"backgroundColor":"hsl(233, 9%, 28%)"}},"dataKey":"5751243db39dc7001186331dfa11611c","key":"5751243db39dc7001186331dfa11611c"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+]
+
+---
+## Konfirmatorische Studie (RCT)
+### Stichprobe
+
+
+---
+## Konfirmatorische Studie (RCT)
+### Ergebnisse: Akkuratheit
+.pull-left[
+&lt;img src="img/Adjrand_between_t1_vis.png" width="100%" /&gt;
+]
+
+.pull-right[
+&lt;img src="img/Adjrand_within_t34_vis.png" width="100%" /&gt;
+]
+
+---
+## Konfirmatorische Studie (RCT)
+### Ergebnisse: Effizienz
+.pull-left[
+&lt;img src="img/Dwelltime_between_t1_vis.png" width="100%" /&gt;
+]
+
+.pull-right[
+&lt;img src="img/Dwelltime_within_t3_t4_vis.png" width="100%" /&gt;
+]
+
+
+---
+class: middle center
+## 3) Ihre Fragen zu Video &amp; Aufgaben
+
+---
+## Ihre Fragen zu Video &amp; Aufgaben
+
+Bitte stellen Sie unter https://bit.ly/merk006 Fragen zu Video und Aufgaben.&lt;br&gt;&lt;br&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-18-1.png" width="30%" style="display: block; margin: auto;" /&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"navigation": {
+"scroll": false,
+"click": false,
+"touch": true
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
