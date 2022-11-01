@@ -45,7 +45,7 @@ class: center,  middle, hide_logo
 library(xaringanthemer)
 library(fontawesome)
 library(xaringanExtra)
-
+set.seed(25051982)
 extra_css <- list(
   ".cit"  = list("font-size" = "70%",
                  "color" = "#6AEE3E90"),
@@ -117,8 +117,16 @@ use_logo(
 ### Qualitative und quantitative Forschungsmethoden
 ---  
 .em14[Samuel Merk | PH Karlsruhe]]  
-`r typedjs::typed(c("Hallo und 💚-lich Willkommen!", "Die heutige Sitzung wird drei Teile haben:", "1. als erstes werden wir Abstracts lesen und kategorisieren", "2. danach auf das Experiment eingehen, das Sie bearbeitet haben", "und 3. Ihre dann noch offenen Fragen bearbeiten"), typeSpeed = 80, backSpeed = 10, backDelay = 3000, loop = T, contentType = "html")` 
+`r typedjs::typed(c("Hallo und 💚-lich Willkommen!", "Die heutige Sitzung wird vier Teile haben:", "1. als erstes werden wir Forschung die auf Spiegel Online berichtet wurde einschätzen", "2. danach Ihre dann noch offenen Fragen bearbeiten", "3. mit weiteren Übungen vertiefen", "und schließlich 4. die Gewinner*innen verlosen."), typeSpeed = 80, backSpeed = 10, backDelay = 3000, loop = T, contentType = "html")` 
 
+---
+class: middle center
+## Heute:
+
+#### Anwenden der Begriffe auf echte Forschungsliteratur
+#### Ihre Fragen zu Video & Aufgaben
+#### Weitere Übungsbeispiele
+#### Verlosung der Gewinnerinnen
 
 
 ---
@@ -134,369 +142,15 @@ class: middle center
 #frame01{ height: 480px; width: 1000px; align: center; overflow: scroll;}
 </style>
 
----
-## Vertiefende Beispiele
-
-Bitte beantworten Sie die Frage auf https://bit.ly/merk006 <br><br>
-```{r, out.width="30%", fig.align='center', echo = F, message = F}
-library(qrencoder)
-par(mar=c(0,0,0,0))
-image(qrencode_raster("https://bit.ly/merk006"), 
-      asp=1, col=c("#000000", "#62DC3A"), axes=FALSE, 
-      xlab="", ylab="", bg = 'transparent')
-```
 
 ---
 class: middle center
-# 2) »Heatmap-Experiment«
-
----
----
-class: hide_logo
-## Digitales Formatives Assessment
-### Ausgangslage
-.em13[
-* Feedback gilt als vergleichweise stark lernförderliche Intervention .cit[(Black & Wiliam, 2009)]
-* Formatives Assessment wird jedoch kaum von Lehrkräften um gesetzt .cit[(Maier, 2019)]
-* Digitalen Technologien wird Potential zugeschrieben, die Hürden für formatives Assessment zu senken .cit[(Tomasik et al., 2018)]]
---
-.pull-left[
-.center[
-&nbsp;<br>
-#### Sowohl Substitution...
-`r fontawesome::fa("file-alt", fill = "#62DC3A", height = "100px")` &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
-`r fontawesome::fa("arrow-right", fill = "#62DC3A", height = "100px")` &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-`r fontawesome::fa("tablet-alt", fill = "#62DC3A", height = "100px")` 
-]
-]
-.pull-right[
-.center[
-&nbsp;<br>
-#### ... als auch Transformation
-```{r, echo = F, fig.cap="molview.org", out.width="35%"}
-knitr::include_graphics("img/MolView.png")
-```
-]
-]
-
----
-class: middle, center
-
-```{r, echo = F, fig.cap="Projektablauf: »Vom Testergebnis zur pädagogischen Maßnahme« (Biaesch Stiftung"}
-knitr::include_graphics("img/Verlauf_Biaesch.png")
-```
-
----
-class: middle, center
-
-```{r, echo = F, fig.cap="Projektablauf: »Vom Testergebnis zur pädagogischen Maßnahme« (Biaesch Stiftung"}
-knitr::include_graphics("img/Verlauf_Biaesch_Pot.png")
-```
-
-
----
-class: hide_logo
-## Potentiale dig. Technologien für die Aufgabenkultur .cit[(Bez, Merk & Tomasik 2021)]
-.em14[
-* Redefinierte Aufgabenformen 
-* Automatisierte Korrektur und unmittelbares Feedback (auch jenseits geschlossener Aufgabenformate)
-* Digitale »Aufgabenpools«
-    * Interaktive Suche entlang diverser Kriterien
-    * Kalibrierte Aufgabenschwierigkeit
-* Adaptive Aufgabenauswahl
-* Echtzeitergebnisübersicht
-* ...]
-
---
-
-.large[.center[.phg[
-$\Rightarrow$ Neue, komplexe Anforderungen an das professionelle Handeln
-]]]
-
----
-class: middle, center
-
-```{r, echo = F, fig.cap="Projektablauf: »Vom Testergebnis zur pädagogischen Maßnahme« (Biaesch Stiftung"}
-knitr::include_graphics("img/Verlauf_Biaesch_explo.png")
-```
-
----
-## Explorative Think-Aloud-Studie
-.pull-left[
-### Formatives Assessmentsystem
-```{r, echo = F, fig.cap="mindsteps.ch", out.width="80%", fig.align='center'}
-knitr::include_graphics("img/mindsteps_auswahl_testart.png")
-```
-]
-
-.pull-right[
-### Stichprobe:
-* Theoretisches/gezieltes Sampling (Patton 1990)
-* $N = 48$ Intensivnutzer\*innen von Mindsteps 
-* $N_{weiblich} = 23$
-* $MW_{Alter} = 43.7$
-* $SD_{Alter} = 11.5$)
-]
-
----
-class: hide_logo middle
-
-```{r, echo = F, fig.cap="mindsteps.ch", out.width="71%", fig.align='center'}
-knitr::include_graphics("img/mindsteps_ergebnisse_klasse_querschnitt.png")
-```
-
-
----
-class: hide_logo middle
-
-```{r, echo = F, fig.cap="mindsteps.ch", out.width="60%", fig.align='center'}
-knitr::include_graphics("img/mindsteps_ergebnisse_einzelschuelerin.png")
-```
-
-
----
-## Auswertung
-Induktiv-Deduktives Timed-Event Coding der Screencasts entlang eines Modells von Coburn & Turner .cit[(2011)]
-
-.pull-left[
-1. <b>Noticing</b>
-    * Rezeption der Grafiken
-        * *Verteilungsform*
-        * *Zentrale Tendenz*
-        * *Dispersion*
-        * *Einzelne Schülerinnen und Schüler*
-2. <b>Interpreting</b>
-    * Abgleich mit der eigenen Einschätzung
-    * Fehleranalyse
-        * *Curriculare Subcomponenten*
-        * *Aufgabenformatartefakte*
-3. <b>Constructing Implications</b>
-    * Curriculare Adaoption
-    * Einzelförderung
-    * Gruppeneinteilung
-]
-
---
-
-.pull-right[
-### Interraterreliabilität
-* Krippendorffs $.51 ≤ \alpha ≤ .95$ .cit[(Hayes & Krippendorff, 2007)]
-* Überführung von Abweichungen in Konsensurteile
-
-### Verlaufsanalyse
-* Zero-/First-Order (manifest) Marcov Chains .cit[(Scholz, 2016)]
-    * Auszählung (bedingter) relativer Übergangswahrscheinlichkeiten
-]
-
----
-
-### .phgreenlight[Hypothese: Fehleranalyse ist zentral] .cit[(Bez & Merk, 2021)]
-
-```{r, echo=FALSE}
-library(visNetwork)
-library(readxl)
-nodes <- data.frame(id = 1:6, 
-                    group = c("Login", "Fehleranalyse", "Abgleich", "Handlungsmaßnahme", "Rezeption der Ergebnisse", "Logout"),
-                    label = rep("", 6))
-edges <- read_excel("edges_markov.xlsx") %>% 
-  dplyr::filter(as.numeric(label) > .07)
-
-mc_rezeption <- 
-visNetwork(nodes, edges, width = "1028px", height = "407px",
-           background = "black") %>%
-  visGroups(groupname = "Login", shape = "icon", 
-            icon = list(code = "f04b", color = "#62DC3A", size = 35),
-            font = list(color = "#62DC3A", size = 20, strokeWidth = 1, strokeColor = "#62DC3A")) %>%
-  visGroups(groupname = "Fehleranalyse", shape = "icon", 
-            icon = list(code = "f1e2", color = "#62DC3A", size = 35),
-            font = list(color = "#62DC3A", size = 20, strokeWidth = 1, strokeColor = "#62DC3A")) %>%
-  visGroups(groupname = "Abgleich", shape = "icon", 
-            icon = list(code = "f0c1", color = "#62DC3A", size = 35),
-            font = list(color = "#62DC3A", size = 20, strokeWidth = 1, strokeColor = "#62DC3A")) %>%
-  visGroups(groupname = "Handlungsmaßnahme", shape = "icon", 
-            icon = list(code = "f277", color = "#62DC3A", size = 35),
-            font = list(color = "#62DC3A", size = 20, strokeWidth = 1, strokeColor = "#62DC3A")) %>%
-  visGroups(groupname = "Rezeption der Ergebnisse", shape = "icon", 
-            icon = list(code = "f080", color = "#62DC3A", size = 35),
-             font = list(color = "#62DC3A", size = 20, strokeWidth = 1, strokeColor = "#62DC3A")) %>%
-  visGroups(groupname = "Logout", shape = "icon", 
-            icon = list(code = "f04d", color = "#62DC3A", size = 30),
-            font = list(color = "#62DC3A", size = 20, strokeWidth = 1, strokeColor = "#62DC3A")) %>%
-  visOptions(highlightNearest = list(enabled =TRUE, degree = 0)) %>% 
-  visLegend(width = .3, zoom = F) %>%
-  visLayout(randomSeed = 423) %>% # 364 bei filter .15  #25235 bei filter.0
-  visPhysics(solver = "repulsion") %>% 
-  visEdges(color = list(),
-           font = list(color = "#8cd000",
-                       size = 16,
-                       strokeWidth = 0,
-                       strokeColor = "white",
-                       vadjust = 10)) %>% 
-  addFontAwesome()
-
-widgetframe::frameWidget(mc_rezeption, height = 500)
-```
-
----
-class: middle, center
-
-```{r, echo = F, fig.cap="Projektablauf: »Vom Testergebnis zur pädagogischen Maßnahme« (Biaesch Stiftung"}
-knitr::include_graphics("img/Verlauf_Biaesch_konf.png")
-```
-
-
----
-## Konfirmatorische Studie (RCT)
-> .phgreenlight[Ziel: Verbesserung von Noticing und Interpreting durch innovative Darstellungen und eine Kurzzeit-Schulung]
-
-### Abhängige Variablen:
-
-AV1: Akkuratheit
-* Wie gut stimmen von Lehrkräften gebildete homogene (Lern-)Gruppen mit algorithmischen Lösungen überein?
-        
-AV2: Effektivität
-* Wie lange brauchen Lehrkräfte um auf ihre korrekte Lösung zu kommen?
-
-AV3: Diagnostische Differenziertheit
-* Erkennen Lehrkräfte 
-    * Curriculare Subkomponenten und
-    * Aufgabenformatartefakte?
-
----
-## Konfirmatorische Studie: Design
-
-
-
-
----
-## Konfirmatorische Studie (RCT)
-### Design
-```{r, echo = F, out.width="70%"}
-knitr::include_graphics("img/Design_Heatmapstudie.png")
-```
-
----
-## Konfirmatorische Studie (RCT)
-### Materials
-.pull-left[
-
-```{r, echo = F, out.width="90%", fig.align='center', message = F, warning = F, fig.retina=5, fig.height=5, fig.width=8}
-library(dplyr)
-library(gplots)
-library(viridis)
-data_dummy_tsheatmap <- read_excel("MWE_Data_1_von Sarah.xlsx")
-data_heatmap <- data_dummy_tsheatmap%>%
-  select(-PID)%>%
-  sample_frac(size = 1)%>%
-  as.matrix(., rownames.force = T)
-
-row.names(data_heatmap) <- pull(data_dummy_tsheatmap, "PID")
-data_rowmeans <- rowMeans(data_heatmap)
-data_colmeans <- colMeans(data_heatmap)
-
-cols <- viridis(100)
-rowcols <- viridis(100)
-colcols <- viridis(100)
-par(bg = 'black', col = "white", axis = "white", col.axis = "white")
-heatmap.2(data_heatmap, scale = "none", col = viridis, 
-          Rowv = T,
-          Colv = T,
-          dendrogram = "none",
-          trace = "none", density.info = "none",
-          RowSideColors = rowcols[round(data_rowmeans*100,0)],
-          ColSideColors = colcols[round(data_colmeans*100,0)],
-          key.title = NA,
-          key.xlab = "Anteil korrekter Lösungen\npro Aufgabe/SchuelerIn",
-          key.par = list(cex=.7),
-          margins = c(8, 8))#,
-          #distfun = function(c) as.dist(1 - c))
-
-
-```
-]
-
-.pull-right[
-
-```{r, echo = F, out.width="80%", fig.align='center', message = F}
-library(readxl)
-library(tidyverse)
-library(gplots)
-library(RColorBrewer)
-library(viridis)
-library(reactable)
-
-data_dummy_tsheatmap <- read_excel("MWE_Data_1_von Sarah.xlsx")
-
-options(reactable.theme = reactableTheme(
-  color = "hsl(233, 9%, 87%)",
-  backgroundColor = "hsl(233, 9%, 19%)",
-  borderColor = "hsl(233, 9%, 22%)",
-  stripedColor = "hsl(233, 12%, 22%)",
-  highlightColor = "hsl(233, 12%, 24%)",
-  inputStyle = list(backgroundColor = "hsl(233, 9%, 25%)"),
-  selectStyle = list(backgroundColor = "hsl(233, 9%, 25%)"),
-  pageButtonHoverStyle = list(backgroundColor = "hsl(233, 9%, 25%)"),
-  pageButtonActiveStyle = list(backgroundColor = "hsl(233, 9%, 28%)")
-))
-
-reactable(
-  data_dummy_tsheatmap,
-  columns = list(
-    PID = colDef(minWidth = 150)),
-  resizable = TRUE,
-  wrap = FALSE,
-  showPageSizeOptions = TRUE,
-  striped = TRUE,
-  highlight = TRUE,
-  defaultPageSize = 6
-)
-```
-]
-
----
-## Konfirmatorische Studie (RCT)
-### Stichprobe
-
-
----
-## Konfirmatorische Studie (RCT)
-### Ergebnisse: Akkuratheit
-.pull-left[
-```{r, echo = F, out.width="100%"}
-knitr::include_graphics("img/Adjrand_between_t1_vis.png")
-```
-]
-
-.pull-right[
-```{r, echo = F, out.width="100%"}
-knitr::include_graphics("img/Adjrand_within_t34_vis.png")
-```
-]
-
----
-## Konfirmatorische Studie (RCT)
-### Ergebnisse: Effizienz
-.pull-left[
-```{r, echo = F, out.width="100%"}
-knitr::include_graphics("img/Dwelltime_between_t1_vis.png")
-```
-]
-
-.pull-right[
-```{r, echo = F, out.width="100%"}
-knitr::include_graphics("img/Dwelltime_within_t3_t4_vis.png")
-```
-]
-
-
----
-class: middle center
-## 3) Ihre Fragen zu Video & Aufgaben
+## 2) Ihre Fragen zu Video & Aufgaben
 
 ---
 ## Ihre Fragen zu Video & Aufgaben
 
-Bitte stellen Sie unter https://bit.ly/merk006 Fragen zu Video und Aufgaben.<br><br>
+Bitte stellen Sie unter https://bit.ly/merk006 Fragen zu Video und Aufgaben. Klicken Sie dazu auf »Q&A«.<br><br>
 ```{r, out.width="30%", fig.align='center', echo = F, message = F}
 library(qrencoder)
 par(mar=c(0,0,0,0))
@@ -504,3 +158,40 @@ image(qrencode_raster("https://bit.ly/merk006"),
       asp=1, col=c("#000000", "#62DC3A"), axes=FALSE, 
       xlab="", ylab="", bg = 'transparent')
 ```
+
+
+---
+class: middle center
+## 3) Vertiefende Beispiele
+
+---
+## Vertiefende Beispiele
+
+Bitte beantworten Sie die Fragen auf https://bit.ly/merk006. Klicken Sie dazu bitte auf »Fragen« <br><br>
+```{r, out.width="30%", fig.align='center', echo = F, message = F}
+library(qrencoder)
+par(mar=c(0,0,0,0))
+image(qrencode_raster("https://bit.ly/merk006"), 
+      asp=1, col=c("#000000", "#62DC3A"), axes=FALSE, 
+      xlab="", ylab="", bg = 'transparent')
+```
+
+
+---
+class: middle center
+## 4) Verlosung der Gewinnerinnen und Gewinner
+
+---
+## Verlosung der Gewinnerinnen und Gewinner
+```{r, message=FALSE, warning=FALSE}
+library(readxl)
+library(tidyverse)
+read_xlsx("data_Verlosung.xlsx") %>% 
+  mutate(Gewinncode_erster_Teil = substr(Gewinncode,1,8)) %>% 
+  filter(Einwilligung == 1) %>% 
+  distinct(Referenz, Gewinncode_erster_Teil) %>% 
+  select(Gewinncode_erster_Teil) %>% 
+  na.omit() %>% 
+  sample_n(5)
+```
+
